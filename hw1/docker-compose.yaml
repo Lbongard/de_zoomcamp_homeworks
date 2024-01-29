@@ -1,0 +1,21 @@
+services: 
+  db:
+      image: postgres:13
+      restart: always
+      environment:
+        POSTGRES_USER: admin
+        POSTGRES_PASSWORD: hw1
+        POSTGRES_DB: ny_taxi_sept
+      volumes:
+        #- ./green_taxi_data:/input_data
+        #- ./sql:/docker-entrypoint-initdb.d
+      ports:
+        - 5432:5432
+  pgadmin:
+    image: dpage/pgadmin4
+    environment: 
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=hw1
+    ports:
+      - 8080:80
+
