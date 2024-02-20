@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: staging
+    database: inbound-ship-412204
+     # For postgres:
+      #database: production
+    schema: ny_taxi_all
+
+      # loaded_at_field: record_loaded_at
+    tables:
+      - name: green_cab_data
+      - name: yellow_cab_data
+         # freshness:
+           # error_after: {count: 6, period: hour}
