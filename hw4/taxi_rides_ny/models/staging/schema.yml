@@ -18,6 +18,7 @@ sources:
         - name: fhv_cab_data
          # freshness:
            # error_after: {count: 6, period: hour}
+        - name: INFORMATION_SCHEMA
 
 models:
     - name: stg_green_tripdata
